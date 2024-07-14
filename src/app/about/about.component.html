@@ -1,0 +1,44 @@
+<section id="about" class="text-white bg-[#131314] min-h-screen font-main">
+  <div class="mx-44">
+    <div class="text-[#2274A5] text-xl font-sans text-left">
+      01.
+      <span class="text-[#E9F1F7] text-2xl font-extrabold">{{
+        about.title
+      }}</span>
+      <div class="text-[#E9F1F7] opacity-80 w-full h-1"></div>
+    </div>
+    <div class="max-w-[900px]">
+      <div class="max-w-[500px] leading-[1.65] opacity-80 text-sm">
+        <div>{{ paragraph1 }}</div>
+        <br />
+        <div>{{ paragraph2 }}</div>
+        <!-- <br />
+        <div>{{ paragraph3 }}</div> -->
+        <br />
+        <div>{{ paragraph4 }}</div>
+      </div>
+      <div class="flex mt-3 text-sm">
+        <div class="w-1/2 pr-4">
+          <ul>
+            <li
+              *ngFor="let skill of skillsLeft"
+              class="hover:text-[#2274A5] w-fit"
+            >
+              <span class="text-[#2274A5]">▹</span>{{ skill.name }}
+            </li>
+          </ul>
+        </div>
+        <div class="w-1/2 pl-4">
+          <ul>
+            <li
+              *ngFor="let skill of skillsRight"
+              class="hover:text-[#2274A5] w-fit"
+            >
+              <span class="text-[#2274A5]">▹</span> {{ skill.name }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

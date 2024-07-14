@@ -1,0 +1,19 @@
+<div
+  [ngClass]="{
+    'w-10 fixed bottom-0 z-10 text-light-slate': true,
+    'left-10': orientation === 'left',
+    'right-10': orientation !== 'left',
+    'md:left-5': orientation === 'left',
+    'md:right-5': orientation !== 'left',
+    'hidden md:block': true
+  }"
+>
+  <ng-container *ngIf="prefersReducedMotion; else animatedContent">
+    <ng-content></ng-content>
+  </ng-container>
+  <ng-template #animatedContent>
+    <ng-container *ngIf="isMounted">
+      <ng-content></ng-content>
+    </ng-container>
+  </ng-template>
+</div>
