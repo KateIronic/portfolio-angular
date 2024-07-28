@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, Input, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-side',
@@ -11,25 +12,18 @@ import { CommonModule } from '@angular/common';
 export class SideComponent implements OnInit {
   @Input() isHome: boolean = false;
   @Input() orientation: 'left' | 'right' = 'left';
-  prefersReducedMotion: boolean = false;
+
   isMounted: boolean = false;
-  loaderDelay: number = 1000; // Adjust as necessary
+  prefersReducedMotion: boolean = false;
 
-  ngOnInit() {
-    // Check for prefers-reduced-motion using Angular approach
-    this.prefersReducedMotion = window.matchMedia(
-      '(prefers-reduced-motion: reduce)'
-    ).matches;
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
-    if (!this.isHome || this.prefersReducedMotion) {
+  ngOnInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.prefersReducedMotion = window.matchMedia(
+        '(prefers-reduced-motion: reduce)'
+      ).matches;
       this.isMounted = true;
-    } else {
-      setTimeout(() => {
-        this.isMounted = true;
-        console.log('isMounted set to true');
-      }, this.loaderDelay);
     }
-    console.log('prefersReducedMotion:', this.prefersReducedMotion);
-    console.log('isMounted:', this.isMounted);
   }
 }
