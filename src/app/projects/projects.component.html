@@ -8,11 +8,16 @@
     </div>
     <div class="relative font-main">
       <div *ngFor="let work of works" class="rounded-lg font-main h-[400px]">
-        <img
-          class="w-[580px] h-[360px] rounded-sm relative left-[160px]"
-          [src]="work.img"
-          alt=""
-        />
+        <div
+          class="w-[580px] h-[360px] rounded-sm relative left-[160px] cursor-pointer hover:z-10 group bg-[#444746] flex items-center justify-center"
+        >
+          <img
+            class="w-[550px] h-[340px] transform transition-all rounded-sm ease-in duration-200 hover:scale-105"
+            [src]="work.img"
+            alt=""
+          />
+        </div>
+
         <!-- <div class="w-[580px] h-[360px] block opacity-20 hover:translate-x-10 absolute top-6 left-[190px] z-10"></div> -->
 
         <p
@@ -27,7 +32,7 @@
           {{ work.title }}
         </div>
         <div
-          class="bg-[#041E49] z-20 p-4 relative bottom-[280px] left-[600px] text-[#E9F1F7] max-w-[500px] min-h-[122px] w-fit text-right text-sm text-opacity-60 rounded-sm hover:-translate-x-2 hover:-translate-y-2 transition-all duration-200 cursor-auto"
+          class="bg-[#041E49] z-20 p-4 relative bottom-[280px] left-[600px] text-[#E9F1F7] max-w-[500px] min-h-[122px] w-fit text-right text-sm text-opacity-60 rounded-sm transition-all duration-300 cursor-auto group-hover:z"
         >
           {{ work.description }}
         </div>
@@ -45,23 +50,3 @@
     </div>
   </div>
 </section>
-
-<!-- <section class="py-20">
-  <div class="mx-auto container">
-    <div class="text-2xl font-extrabold text-center text-[#E9F1F7] font-main">
-      <span class="text-[#2274A5] font-sans text-xl font-normal">02. </span>
-      Some Things I've Built
-    </div>
-    <div class="projects-container">
-      <div *ngFor="let work of works; let i = index" class="project-card" [ngStyle]="{'top.px': i * 440}">
-        <img [src]="work.img" alt="Project Image" class="project-img" />
-        <p class="project-preTitle">{{ work.preTitle }}</p>
-        <h2 class="project-title">{{ work.title }}</h2>
-        <div class="project-description">{{ work.description }}</div>
-        <ul class="project-technologies">
-          <li *ngFor="let tech of work.technologies">{{ tech }}</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section> -->

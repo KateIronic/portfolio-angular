@@ -1,7 +1,11 @@
 <nav class="h-[100px] bg-[#131314] font-sans mx-28">
   <div class="flex items-center justify-between relative">
-    <a class="navbar-brand text-light">
-      <img src="assets/images/logo.png" width="25" />
+    <a routerLink="/" class="navbar-brand text-light">
+      <ng-icon
+        class="relative top-8 hover:rotate-180 text-[#444746] transition-all duration-500"
+        name="tablerKayak"
+        size="40"
+      ></ng-icon>
     </a>
     <ul
       ngbNav
@@ -38,6 +42,8 @@
       </li>
       <li>
         <button
+          onclick="window.open('../../assets/resume.pdf')"
+          target="_blank"
           class="outline-none text-[#2274A5] border-2 rounded-md py-2 px-4 border-[#2274A5] mx-3 text-xs"
         >
           Resume

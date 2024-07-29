@@ -13,12 +13,12 @@ export class ProjectsComponent {
     {
       id: 1,
       preTitle: 'Featured Project',
-      title: 'EcoMi Service',
+      title: 'Payment App',
       description:
-        'EcoMi Architecture is a robust and scalable microservices architecture developed using Java Spring Boot for an e-commerce platform. This project leverages the microservices design pattern to ensure modularity, flexibility, and ease of maintenance.',
+        'Implemented a Paytm like payment app which allows users to send and receive money, view transaction history, and manage account settings. The app was built using Node.js, PostgreSQL,  Next.js and Tailwind CSS, ensuring secure and efficient payment processing.',
 
-      technologies: ['Spring Boot', 'Spring', 'Java'],
-      img: 'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      technologies: ['Node.js', 'PostgreSQL', 'Next.js'],
+      img: '../../assets/images/payment.png',
       link: 'https://github.com',
       github: 'https://github.com/KateIronic/Java-Microservices',
     },
@@ -29,7 +29,7 @@ export class ProjectsComponent {
       description:
         'Designed and built a feature-rich food delivery application using React Native and Tailwind CSS. The app includes functionalities such as restaurant listings, order placement, real time tracking, and user authentication, providing a seamless user experience.',
       technologies: ['ReactNative', 'Tailwind CSS'],
-      img: 'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      img: '../../assets/images/image.png',
       link: 'https://github.com',
       github: 'https://github.com',
     },
@@ -40,7 +40,7 @@ export class ProjectsComponent {
       description:
         'Created a fully functional Netflix clone using Next.js and Tailwind CSS. The application supports user authentication, dynamic content loading, and a sleek, responsive UI, closely mimicking the core functionalities of the original Netflix platform.',
       technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-      img: 'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      img: '../../assets/images/netflix.png',
       link: 'https://github.com',
       github: 'https://github.com/KateIronic/netflix-clone',
     },
@@ -51,7 +51,7 @@ export class ProjectsComponent {
       description:
         'Developed an interactive cryptocurrency tracking dashboard with React.js and CSS, APIs The application offers real-time updates, detailed charts, and user-specific tracking, allowing users to monitor and analyze cryptocurrency trends effectively.',
       technologies: ['React.js', 'CSS'],
-      img: 'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      img: '../../assets/images/crypto.png',
       link: 'https://github.com',
       github: 'https://github.com/KateIronic/crypto-tracker',
     },
